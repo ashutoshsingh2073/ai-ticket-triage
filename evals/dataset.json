@@ -1,0 +1,77 @@
+[
+  {
+    "id": "double-charge",
+    "message": "I was charged twice for order A-4471, ₹1299 each time. Please fix this immediately.",
+    "expected": { "intent": "billing", "priority": "high", "orderId": "A-4471", "amountPaise": 129900 }
+  },
+  {
+    "id": "refund-polite",
+    "message": "Hi, I would like a refund for order B-220. The shoes did not fit.",
+    "expected": { "intent": "refund", "priority": "medium", "sentiment": "neutral", "orderId": "B-220" }
+  },
+  {
+    "id": "refund-angry",
+    "message": "This is the worst service ever!! I want my money back for A-9001 right now!!",
+    "expected": { "intent": "refund", "sentiment": "angry", "orderId": "A-9001" }
+  },
+  {
+    "id": "payment-failed",
+    "message": "My payment failed but the money left my account. Order C-77.",
+    "expected": { "intent": "billing", "priority": "high", "orderId": "C-77" }
+  },
+  {
+    "id": "app-crash",
+    "message": "The app crashes every time I open the cart page. Nothing is working.",
+    "expected": { "intent": "bug", "sentiment": "neutral" }
+  },
+  {
+    "id": "delivery-late",
+    "message": "Where is my parcel? The courier has not delivered order D-150 for a week.",
+    "expected": { "intent": "delivery", "orderId": "D-150" }
+  },
+  {
+    "id": "tracking-question",
+    "message": "How do I track my order once it ships?",
+    "expected": { "intent": "delivery", "orderId": null, "amountPaise": null }
+  },
+  {
+    "id": "login-locked",
+    "message": "I cannot sign in, my account says it is locked after a few password attempts.",
+    "expected": { "intent": "account" }
+  },
+  {
+    "id": "otp-issue",
+    "message": "The OTP for login never arrives on my phone.",
+    "expected": { "intent": "account" }
+  },
+  {
+    "id": "policy-question",
+    "message": "What is your return window for unused items?",
+    "expected": { "intent": "question", "priority": "low", "orderId": null }
+  },
+  {
+    "id": "happy-feedback",
+    "message": "Thank you, the replacement arrived quickly and I love it.",
+    "expected": { "sentiment": "happy" }
+  },
+  {
+    "id": "legal-threat",
+    "message": "If this is not resolved I will take this to consumer court.",
+    "expected": { "priority": "high" }
+  },
+  {
+    "id": "amount-rupee-word",
+    "message": "Please refund Rs 450 for order E-12 as the item was damaged.",
+    "expected": { "intent": "refund", "orderId": "E-12", "amountPaise": 45000 }
+  },
+  {
+    "id": "no-order-id",
+    "message": "I need a refund but I cannot find my order number anywhere.",
+    "expected": { "intent": "refund", "orderId": null }
+  },
+  {
+    "id": "outage",
+    "message": "Your website has been down for two hours and I cannot place any order.",
+    "expected": { "priority": "high" }
+  }
+]
